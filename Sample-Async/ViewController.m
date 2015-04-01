@@ -62,46 +62,49 @@
     
     NSString *identifier = [NSString stringWithFormat:@"Cell%ld",(long)indexPath.row];
     
-    if([self.cachedImages objectForKey:identifier] != nil){
-        cell.imageView.image = [self.cachedImages valueForKey:identifier];
-    }else{
-        cell.imageView.image = [UIImage imageNamed:@"placeholder.jpg"];
-        
-        char const * s = [identifier  UTF8String];
-        dispatch_queue_t gQueue = dispatch_queue_create(s, 0);
-//        dispatch_queue_t gQueue = dispatch_queue_create("downloadQue", NULL);
-        dispatch_async(gQueue, ^{
-            NSString *strURL = [[ArrayObj objectAtIndex:indexPath.row] objectForKey:@"tbUrl"];
-            NSURL *url = [NSURL URLWithString:strURL];
+    if (!tableView.decelerating || !tableView.dragging) {
+        if([self.cachedImages objectForKey:identifier] != nil){
+            cell.imageView.image = [self.cachedImages valueForKey:identifier];
+        }else{
+            cell.imageView.image = [UIImage imageNamed:@"placeholder.jpg"];
             
-            NSData *imgData = [NSData dataWithContentsOfURL:url];
-            if (imgData) {
-                UIImage *image = [UIImage imageWithData:imgData];
-                if (image) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        //code from http://kemal.co/index.php/2013/02/loading-images-asynchronously-on-uitableview/
-                        if ([tableView indexPathForCell:cell].row == indexPath.row) {
+            char const * s = [identifier  UTF8String];
+            dispatch_queue_t gQueue = dispatch_queue_create(s, 0);
+            //        dispatch_queue_t gQueue = dispatch_queue_create("downloadQue", NULL);
+            dispatch_async(gQueue, ^{
+                NSString *strURL = [[ArrayObj objectAtIndex:indexPath.row] objectForKey:@"tbUrl"];
+                NSURL *url = [NSURL URLWithString:strURL];
+                
+                NSData *imgData = [NSData dataWithContentsOfURL:url];
+                if (imgData) {
+                    UIImage *image = [UIImage imageWithData:imgData];
+                    if (image) {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            //code from http://kemal.co/index.php/2013/02/loading-images-asynchronously-on-uitableview/
+                            if ([tableView indexPathForCell:cell].row == indexPath.row) {
+                                
+                                [self.cachedImages setValue:image forKey:identifier];
+                                
+                                cell.imageView.image = [self.cachedImages valueForKey:identifier];
+                            }
+                            //---------
                             
-                            [self.cachedImages setValue:image forKey:identifier];
+                            //                    cell.imageView.image = image;
                             
-                            cell.imageView.image = [self.cachedImages valueForKey:identifier];
-                        }
-                        //---------
-                        
-                        //                    cell.imageView.image = image;
-                        
-                        //from stack over flow
-                        //                    UITableViewCell *updateCell = (id)[tableView cellForRowAtIndexPath:indexPath];
-                        //                    if (updateCell)
-                        //                        updateCell.imageView.image = image;
-                        //-------------------------------------
-                    });
+                            //from stack over flow
+                            //                    UITableViewCell *updateCell = (id)[tableView cellForRowAtIndexPath:indexPath];
+                            //                    if (updateCell)
+                            //                        updateCell.imageView.image = image;
+                            //-------------------------------------
+                        });
+                    }
                 }
-            }
-        });
+            });
+        }
     }
-    
-    
+    else{
+        
+    }
     cell.textLabel.text = [NSString stringWithFormat:@"url : %@",[[ArrayObj objectAtIndex:indexPath.row] objectForKey:@"url"]];
     
     
