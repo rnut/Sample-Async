@@ -12,6 +12,6 @@
     NSMutableArray *ArrayObj;
 }
 @property(nonatomic,weak)IBOutlet UITableView *Tableview;
-
+@property (strong ,nonatomic) NSMutableDictionary *cachedImages;
 @end
 

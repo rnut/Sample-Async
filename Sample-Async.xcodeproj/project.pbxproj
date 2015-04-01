@@ -17,6 +17,7 @@
 		693995D91ACBB271008F2C9A /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 693995D81ACBB271008F2C9A /* Object.m */; };
 		693995DC1ACBB985008F2C9A /* Service-Load.m in Sources */ = {isa = PBXBuildFile; fileRef = 693995DB1ACBB985008F2C9A /* Service-Load.m */; };
 		693995F31ACBD20C008F2C9A /* Myconnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 693995F21ACBD20C008F2C9A /* Myconnection.m */; };
+		693995F71ACBF33A008F2C9A /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 693995F61ACBF33A008F2C9A /* placeholder.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		693995DB1ACBB985008F2C9A /* Service-Load.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Service-Load.m"; path = "Service/Service-Load.m"; sourceTree = "<group>"; };
 		693995F11ACBD20C008F2C9A /* Myconnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Myconnection.h; path = Service/Myconnection.h; sourceTree = "<group>"; };
 		693995F21ACBD20C008F2C9A /* Myconnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Myconnection.m; path = Service/Myconnection.m; sourceTree = "<group>"; };
+		693995F61ACBF33A008F2C9A /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = img/placeholder.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		693995A01ACBB190008F2C9A = {
 			isa = PBXGroup;
 			children = (
+				693995F81ACBF346008F2C9A /* img */,
 				693995DD1ACBB99D008F2C9A /* Service */,
 				693995D61ACBB219008F2C9A /* Model */,
 				693995AB1ACBB190008F2C9A /* Sample-Async */,
@@ -148,6 +151,14 @@
 				693995F21ACBD20C008F2C9A /* Myconnection.m */,
 			);
 			name = Service;
+			sourceTree = "<group>";
+		};
+		693995F81ACBF346008F2C9A /* img */ = {
+			isa = PBXGroup;
+			children = (
+				693995F61ACBF33A008F2C9A /* placeholder.jpg */,
+			);
+			name = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +244,7 @@
 				693995B81ACBB190008F2C9A /* Main.storyboard in Resources */,
 				693995BD1ACBB190008F2C9A /* LaunchScreen.xib in Resources */,
 				693995BA1ACBB190008F2C9A /* Images.xcassets in Resources */,
+				693995F71ACBF33A008F2C9A /* placeholder.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
