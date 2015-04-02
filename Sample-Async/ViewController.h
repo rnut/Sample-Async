@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FeedService.h"
 
 @interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
     NSMutableArray *ArrayObj;

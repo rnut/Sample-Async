@@ -18,6 +18,8 @@
 		693995DC1ACBB985008F2C9A /* Service-Load.m in Sources */ = {isa = PBXBuildFile; fileRef = 693995DB1ACBB985008F2C9A /* Service-Load.m */; };
 		693995F31ACBD20C008F2C9A /* Myconnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 693995F21ACBD20C008F2C9A /* Myconnection.m */; };
 		693995F71ACBF33A008F2C9A /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 693995F61ACBF33A008F2C9A /* placeholder.jpg */; };
+		6962ACA51ACD281900FA3CD9 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 6962ACA41ACD281900FA3CD9 /* Review.m */; };
+		6962ACA91ACD2B6100FA3CD9 /* FeedService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6962ACA81ACD2B6100FA3CD9 /* FeedService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		693995F11ACBD20C008F2C9A /* Myconnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Myconnection.h; path = Service/Myconnection.h; sourceTree = "<group>"; };
 		693995F21ACBD20C008F2C9A /* Myconnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Myconnection.m; path = Service/Myconnection.m; sourceTree = "<group>"; };
 		693995F61ACBF33A008F2C9A /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = img/placeholder.jpg; sourceTree = "<group>"; };
+		6962ACA31ACD281900FA3CD9 /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Review.h; path = "Sample-Async/Model/Review.h"; sourceTree = "<group>"; };
+		6962ACA41ACD281900FA3CD9 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Review.m; path = "Sample-Async/Model/Review.m"; sourceTree = "<group>"; };
+		6962ACA71ACD2B6100FA3CD9 /* FeedService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedService.h; path = Service/FeedService.h; sourceTree = "<group>"; };
+		6962ACA81ACD2B6100FA3CD9 /* FeedService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedService.m; path = Service/FeedService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,8 @@
 		693995D61ACBB219008F2C9A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6962ACA31ACD281900FA3CD9 /* Review.h */,
+				6962ACA41ACD281900FA3CD9 /* Review.m */,
 				693995D71ACBB271008F2C9A /* Object.h */,
 				693995D81ACBB271008F2C9A /* Object.m */,
 			);
@@ -145,6 +153,8 @@
 		693995DD1ACBB99D008F2C9A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				6962ACA71ACD2B6100FA3CD9 /* FeedService.h */,
+				6962ACA81ACD2B6100FA3CD9 /* FeedService.m */,
 				693995DA1ACBB985008F2C9A /* Service-Load.h */,
 				693995DB1ACBB985008F2C9A /* Service-Load.m */,
 				693995F11ACBD20C008F2C9A /* Myconnection.h */,
@@ -267,6 +277,8 @@
 				693995B21ACBB190008F2C9A /* AppDelegate.m in Sources */,
 				693995D91ACBB271008F2C9A /* Object.m in Sources */,
 				693995AF1ACBB190008F2C9A /* main.m in Sources */,
+				6962ACA91ACD2B6100FA3CD9 /* FeedService.m in Sources */,
+				6962ACA51ACD281900FA3CD9 /* Review.m in Sources */,
 				693995F31ACBD20C008F2C9A /* Myconnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +470,7 @@
 				693995CE1ACBB191008F2C9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		693995CF1ACBB191008F2C9A /* Build configuration list for PBXNativeTarget "Sample-AsyncTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +479,7 @@
 				693995D11ACBB191008F2C9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
