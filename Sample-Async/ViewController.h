@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FeedService.h"
-
+#import "DownloadViewController.h"
 @interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
     NSMutableArray *ArrayObj;
 }

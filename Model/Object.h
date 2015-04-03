@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Object : NSObject
+@interface Object : NSObject<NSURLSessionDataDelegate>
 {
     NSString *url;
 }
+@property(nonatomic,strong)NSMutableData *netData;
 -(id)initWithURL:(NSString *)strURL;
 @end

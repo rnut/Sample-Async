@@ -20,6 +20,8 @@
 		693995F71ACBF33A008F2C9A /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 693995F61ACBF33A008F2C9A /* placeholder.jpg */; };
 		6962ACA51ACD281900FA3CD9 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 6962ACA41ACD281900FA3CD9 /* Review.m */; };
 		6962ACA91ACD2B6100FA3CD9 /* FeedService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6962ACA81ACD2B6100FA3CD9 /* FeedService.m */; };
+		6983360C1ACE8206000C741E /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6983360B1ACE8206000C741E /* DownloadViewController.m */; };
+		6983360F1ACE920C000C741E /* DLMethod2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6983360E1ACE920C000C741E /* DLMethod2ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		6962ACA41ACD281900FA3CD9 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Review.m; path = "Sample-Async/Model/Review.m"; sourceTree = "<group>"; };
 		6962ACA71ACD2B6100FA3CD9 /* FeedService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedService.h; path = Service/FeedService.h; sourceTree = "<group>"; };
 		6962ACA81ACD2B6100FA3CD9 /* FeedService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedService.m; path = Service/FeedService.m; sourceTree = "<group>"; };
+		6983360A1ACE8206000C741E /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
+		6983360B1ACE8206000C741E /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
+		6983360D1ACE920C000C741E /* DLMethod2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLMethod2ViewController.h; sourceTree = "<group>"; };
+		6983360E1ACE920C000C741E /* DLMethod2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLMethod2ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 		693995A01ACBB190008F2C9A = {
 			isa = PBXGroup;
 			children = (
+				693995B61ACBB190008F2C9A /* Main.storyboard */,
 				693995F81ACBF346008F2C9A /* img */,
 				693995DD1ACBB99D008F2C9A /* Service */,
 				693995D61ACBB219008F2C9A /* Model */,
@@ -101,11 +108,14 @@
 		693995AB1ACBB190008F2C9A /* Sample-Async */ = {
 			isa = PBXGroup;
 			children = (
+				6983360D1ACE920C000C741E /* DLMethod2ViewController.h */,
+				6983360E1ACE920C000C741E /* DLMethod2ViewController.m */,
 				693995B01ACBB190008F2C9A /* AppDelegate.h */,
 				693995B11ACBB190008F2C9A /* AppDelegate.m */,
 				693995B31ACBB190008F2C9A /* ViewController.h */,
 				693995B41ACBB190008F2C9A /* ViewController.m */,
-				693995B61ACBB190008F2C9A /* Main.storyboard */,
+				6983360A1ACE8206000C741E /* DownloadViewController.h */,
+				6983360B1ACE8206000C741E /* DownloadViewController.m */,
 				693995B91ACBB190008F2C9A /* Images.xcassets */,
 				693995BB1ACBB190008F2C9A /* LaunchScreen.xib */,
 				693995AC1ACBB190008F2C9A /* Supporting Files */,
@@ -274,12 +284,14 @@
 			files = (
 				693995DC1ACBB985008F2C9A /* Service-Load.m in Sources */,
 				693995B51ACBB190008F2C9A /* ViewController.m in Sources */,
+				6983360F1ACE920C000C741E /* DLMethod2ViewController.m in Sources */,
 				693995B21ACBB190008F2C9A /* AppDelegate.m in Sources */,
 				693995D91ACBB271008F2C9A /* Object.m in Sources */,
 				693995AF1ACBB190008F2C9A /* main.m in Sources */,
 				6962ACA91ACD2B6100FA3CD9 /* FeedService.m in Sources */,
 				6962ACA51ACD281900FA3CD9 /* Review.m in Sources */,
 				693995F31ACBD20C008F2C9A /* Myconnection.m in Sources */,
+				6983360C1ACE8206000C741E /* DownloadViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +320,7 @@
 				693995B71ACBB190008F2C9A /* Base */,
 			);
 			name = Main.storyboard;
+			path = "Sample-Async";
 			sourceTree = "<group>";
 		};
 		693995BB1ACBB190008F2C9A /* LaunchScreen.xib */ = {

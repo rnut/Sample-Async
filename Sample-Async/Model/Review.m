@@ -8,6 +8,7 @@
 
 #import "Review.h"
 static NSMutableArray *sharedReviewList = nil;
+static Review *sharedReview = nil;
 @implementation Review
 
 
@@ -27,5 +28,18 @@ static NSMutableArray *sharedReviewList = nil;
         sharedReviewList = [[NSMutableArray alloc] init];
     }
     return sharedReviewList;
+}
++(id)sharedReview{
+    if (sharedReview == nil) {
+        sharedReview = [[Review alloc] init];
+    }
+    return sharedReview;
+}
++(id)setSharedReview:(Review*)changed{
+    if (changed == nil) {
+        sharedReview = [[Review alloc] init];
+    }
+    else sharedReview = changed;
+    return sharedReview;
 }
 @end

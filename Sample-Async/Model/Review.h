@@ -18,5 +18,7 @@
 @property(nonatomic,strong) NSString *View;
 @property(nonatomic,strong) NSString *Share_Url;
 +(id)sharedReviewList;
++(id)sharedReview;
++(id)setSharedReview:(Review*)changed;
 -(id)initWithContent_ID:(NSString *)conId Thumbnail_URL:(NSString*)thumbUrl Title:(NSString*)title View:(NSString*)view Share_Url:(NSString*)shareUrl;
 @end
